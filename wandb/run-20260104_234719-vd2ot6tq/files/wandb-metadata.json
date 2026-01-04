@@ -1,0 +1,43 @@
+{
+  "os": "macOS-14.6.1-arm64-arm-64bit",
+  "python": "CPython 3.10.19",
+  "startedAt": "2026-01-04T22:47:19.049111Z",
+  "args": [
+    "--model_dir",
+    "/Users/agustindei/Documents/NLP/Projet_sorbonne/Fine_tuning/LatinBert/latin_bert",
+    "--output_dir",
+    "outputs/latinbert_finetuned"
+  ],
+  "program": "/Users/agustindei/Documents/NLP/Projet_sorbonne/Test_annotation/gold_texts/speechdetection/reported-speech-detection-latin/src/latinbert_finetuning/train_latinbert.py",
+  "codePath": "speechdetection/reported-speech-detection-latin/src/latinbert_finetuning/train_latinbert.py",
+  "codePathLocal": "src/latinbert_finetuning/train_latinbert.py",
+  "git": {
+    "remote": "https://github.com/agu-oli/seneca_annotation_UD.git",
+    "commit": "07988c077d11ca7dd4d1983b93ca49d7d893f85b"
+  },
+  "email": "a.oliveriod@gmail.com",
+  "root": "/Users/agustindei/Documents/NLP/Projet_sorbonne/Test_annotation/gold_texts/speechdetection/reported-speech-detection-latin",
+  "host": "MacBook-Pro-84.homenet.telecomitalia.it",
+  "executable": "/opt/anaconda3/envs/latinbert/bin/python",
+  "cpu_count": 8,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "494384795648",
+      "used": "463793569792"
+    }
+  },
+  "memory": {
+    "total": "17179869184"
+  },
+  "apple": {
+    "name": "Apple M3",
+    "ecpuCores": 4,
+    "pcpuCores": 4,
+    "gpuCores": 10,
+    "memoryGb": 16,
+    "swapTotalBytes": "38654705664",
+    "ramTotalBytes": "17179869184"
+  },
+  "writerId": "58c5zacllni3gdfpm6hxw67rzz9zzgji"
+}
