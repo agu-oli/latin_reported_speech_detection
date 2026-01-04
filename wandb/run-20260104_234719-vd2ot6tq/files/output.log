@@ -1,6 +1,0 @@
-  0%|                                                                                                                                  | 0/60 [00:00<?, ?it/s]/opt/anaconda3/envs/latinbert/lib/python3.10/site-packages/torch/utils/data/dataloader.py:692: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
-  warnings.warn(warn_msg)
-  3%|████                                                                                                                      | 2/60 [00:11<04:53,  5.05s/it]/opt/anaconda3/envs/latinbert/lib/python3.10/site-packages/torch/utils/data/dataloader.py:692: UserWarning: 'pin_memory' argument is set as true but not supported on MPS now, device pinned memory won't be used.
-{'loss': 0.7417, 'grad_norm': 6.293432235717773, 'learning_rate': 9.666666666666667e-06, 'epoch': 1.0}
-  warnings.warn(warn_msg)                                                                                                                                     
-{'eval_loss': 0.714964747428894, 'eval_accuracy': 0.4785553047404063, 'eval_precision': 0.530011325028
