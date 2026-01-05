@@ -14,9 +14,9 @@ python src/preprocessing.py \
 
 This script creates the following files:
 
-data/train.jsonl
-data/val.jsonl
-data/test.jsonl
+- data/train.jsonl
+- data/val.jsonl
+- data/test.jsonl
 
 ## 2. Train scripts
 
