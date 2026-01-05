@@ -75,4 +75,3 @@ are assigned to the same split.
 # Requirements
 
 Two requirements.txt files are being specified: one for Latin Bert fine-tuning, the other for finetuning PhilBERTa or LaBERTa
-

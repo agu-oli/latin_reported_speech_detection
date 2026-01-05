@@ -30,7 +30,7 @@ from dataclasses import dataclass
 from typing import Any, Dict, List
 
 
-# SEED
+# SEED fixed in script
 
 SEED = 42
 set_seed(SEED)

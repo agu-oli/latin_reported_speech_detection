@@ -22,7 +22,7 @@ def df_to_examples(df: pd.DataFrame):
     return examples
 
 
-SEED = 42  
+SEED = 42  # Fixed seed in script
 
 
 def main():
@@ -67,9 +67,6 @@ def main():
     train_ds = dataset.filter(lambda x: x["microsection"] in train_set)
     val_ds   = dataset.filter(lambda x: x["microsection"] in val_set)
     test_ds  = dataset.filter(lambda x: x["microsection"] in test_set)
-
-
-
 
     # 4) Save datasets
     train_ds.to_json(out_dir / "train.jsonl", orient="records", lines=True)

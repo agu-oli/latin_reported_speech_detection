@@ -1,7 +1,3 @@
-# train_latinbert_features.py
-# Same script, just wrapped in a main() with args like you asked.
-# Seeds stay FIXED in the script.
-
 import os
 import json
 import random
@@ -42,7 +38,7 @@ torch.manual_seed(SEED)
 torch.cuda.manual_seed_all(SEED)
 
 
-# Latin BERT vocab conventions
+# Latin Bert vocab conventions
 
 
 SPECIAL = {"[PAD]": 0, "[UNK]": 1, "[CLS]": 2, "[SEP]": 3, "[MASK]": 4}
@@ -111,7 +107,7 @@ def build_vocab(dataset: Dataset, tag: str, pad_token="[PAD]", unk_token="[UNK]"
             vocab[v] = len(vocab)
     return vocab
 
-#  feature ids function: for PoS and lemmas
+# feature ids function: for PoS and lemmas
 
 def add_feature_ids_factory(pos2id, lemma2id):
     def add_feature_ids(batch):
@@ -169,7 +165,6 @@ def tokenize_and_align_everything_factory(encoder): # encoder: text_encoder.Subw
         out_sentence_id = []
         out_window_id = []
 
-        # IMPORTANT: this version also aligns features (lemma_ids_aligned, pos_ids_aligned, non_finite_verb_aligned)
         out_lemma = []
         out_pos = []
         out_nfv = []
@@ -408,7 +403,7 @@ def main():
     ap.add_argument("--batch_size", type=int, default=8)
     ap.add_argument("--weight_decay", type=float, default=0.01)
 
-    # model loading: the model must loaded from local.
+    # model loading: the model must loaded locally.
     # the model can be downloaded from https://github.com/dbamman/latin-bert following the instructions.
 
     ap.add_argument(
