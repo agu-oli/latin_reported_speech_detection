@@ -21,16 +21,15 @@ This script creates the following files:
 ## 2. Train scripts
 
 The training scripts assume the training, validation and test data exist in the data folder.
-Data files are loaded from the default folder after having run preprocessing.py: 
-data/val.jsonl
-data/test.jsonl
-outputs/run
+Data files are loaded from the default folder after having run preprocessing.py.
 
 Important: This repository uses 'eval_strategy' for Roberta based models and 'evaluation_strategy' for Latin Bert in the trainer arguments. If you get 'TypeError: unexpected keyword argument' switch name.
 
 ### Roberta based models: Philberta and Laberta
 
-PhilBERTa and LaBERTa use Hugging Face tokenizers. Indicate the model name:
+PhilBERTa and LaBERTa use Hugging Face tokenizers. You must indicate the model name:
+
+bowphs/LaBerta:
 
 ```
 python src/robertabased_finetuning/train_robertabasedmodel.py \
@@ -38,22 +37,25 @@ python src/robertabased_finetuning/train_robertabasedmodel.py \
   --output_dir outputs/laberta_finetuned
 ```
 
-bowphs/PhilBerta
+bowphs/PhilBerta:
 
+```
 python src/robertabased_finetuning/train_robertabasedmodel.py \
   --model_name bowphs/PhilBerta \
-  --output_dir outputs/laberta_finetuned
+  --output_dir outputs/philberta_finetuned
+  ```
 
 ### Latin Bert
 
 A specific finetuning script is necesssary for Latin BERT.
 LatiN BERT does not use a standard Hugging Face tokenizer. 
-Tokenization is instead done using:
+Instead, tokenization is done using:
+
 - tensor2tensor.data_generators.text_encoder.SubwordTextEncoder
 - a vocab.txt that can be downloaded with the model 
 - a custom encoding and alignment step
 
-Also the model must be dowloaded from https://github.com/dbamman/latin-bert and loaded locally.
+Also, the model must be dowloaded from https://github.com/dbamman/latin-bert and loaded locally.
 
 For this reason in order to run train_latinbert.py you must provide your local path to the model:
 
@@ -66,7 +68,7 @@ python src/latinbert_finetuning/train_latinbert.py \
 # Dataset splitting strategy 
 
 The dataset is split at the level of the microsection field, corresponding
-to span-level discourse units.We randomly assigned 70% of the 
+to span-level discourse units. We randomly assigned 70% of the 
 sections to training, 20% to validation, and 10% to the
 test sets using a fixed random seed (42). No section
 appears in more than one split. All tokens belonging to the same section
