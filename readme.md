@@ -1,6 +1,6 @@
 # Fine-tuning Latin BERT, PhilBERTa, and LaBERTa
 
-This repository includes the code for finetuning Latin Bert, Philberta and Laberta models.
+This repository includes the code for finetuning Latin Bert, Philberta and Laberta models for binary token classification. The fine-tuned model detects sequences of reported speech in Latin. The training data includes extracts from Seneca's The Elder Controuersiae et Suasoriae, written around 30 AD. 
 
 ## 1. Data preprocessing
 
