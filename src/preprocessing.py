@@ -37,12 +37,12 @@ def main():
     splits_dir = out_dir.parent / "splits"
     splits_dir.mkdir(parents=True, exist_ok=True)
 
-    # 1) Load CSV and build microsection-level dataset
+    # load CSV and build microsection-level dataset
     
     df = pd.read_csv(args.input_csv)
     dataset = Dataset.from_list(df_to_examples(df))
 
-    # 2) Fixed split by microsection (70 / 20 / 10)
+    # fixed split by microsection (70 / 20 / 10)
 
     micro = list(dataset["microsection"])
 
@@ -68,7 +68,7 @@ def main():
     val_ds   = dataset.filter(lambda x: x["microsection"] in val_set)
     test_ds  = dataset.filter(lambda x: x["microsection"] in test_set)
 
-    # 4) Save datasets
+    # save datasets
     train_ds.to_json(out_dir / "train.jsonl", orient="records", lines=True)
     val_ds.to_json(out_dir / "dev.jsonl", orient="records", lines=True)
     test_ds.to_json(out_dir / "test.jsonl", orient="records", lines=True)
