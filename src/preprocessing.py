@@ -37,7 +37,7 @@ def main():
     splits_dir = out_dir.parent / "splits"
     splits_dir.mkdir(parents=True, exist_ok=True)
 
-    # load CSV and build microsection-level dataset
+    # load CSV and build dataset
     
     df = pd.read_csv(args.input_csv)
     dataset = Dataset.from_list(df_to_examples(df))
